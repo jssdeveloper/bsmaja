@@ -12,5 +12,5 @@ func main() {
 	})
 	app.Static("/", "./public")
 	app.Get("/", homeRoute)
-	app.Listen(":3000")
+	app.Listen(":80")
 }

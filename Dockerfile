@@ -1,6 +1,6 @@
-FROM golang:1.21.1
+FROM golang:1.21.4-alpine3.18
 WORKDIR /app
-EXPOSE 3000
+EXPOSE 80
 COPY . .
 RUN go mod tidy
-RUN go build -o app .
+RUN go build -o app
