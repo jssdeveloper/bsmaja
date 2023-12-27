@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/django/v3"
 )
@@ -11,6 +13,9 @@ func main() {
 		Views: engine,
 	})
 	app.Static("/", "./public")
-	app.Get("/", homeRoute)
-	app.Listen(":80")
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.Render("base", fiber.Map{})
+	})
+
+	log.Fatal(app.Listen(":3100"))
 }
