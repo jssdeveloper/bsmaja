@@ -17,5 +17,6 @@ func main() {
 		return c.Render("base", fiber.Map{})
 	})
 
-	log.Fatal(app.Listen(":3100"))
+	log.Fatal(app.Listen("192.168.0.180:3100")) // dev
+	// log.Fatal(app.Listen(":80")) // prod
 }
