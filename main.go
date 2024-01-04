@@ -18,6 +18,6 @@ func main() {
 	})
 
 	// log.Fatal(app.Listen("192.168.0.164:3100")) // dev mac mini
-	log.Fatal(app.Listen("192.168.0.180:3100")) // dev macbook
-	// log.Fatal(app.Listen(":80")) // prod
+	// log.Fatal(app.Listen("192.168.0.180:3100")) // dev macbook
+	log.Fatal(app.Listen(":80")) // prod
 }
